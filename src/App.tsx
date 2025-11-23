@@ -1,25 +1,25 @@
+import GlobalStyle from './styles/globalStyle'
+import { Provider } from 'react-redux'
+import { store } from './store/store'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Container } from './components/Container'
 import DadosContato from './components/DadosContato/DadosContato'
-import ListaContatos from './components/ListaContatos/ListaContatos'
-import GlobalStyles from './styles/globalStyles'
 import NovoContato from './components/NovoContato/NovoContato'
+import { Container } from './components/Container/Container'
 
 function App() {
   return (
-    <>
-      <GlobalStyles />
+    <Provider store={store}>
+      <GlobalStyle />
       <BrowserRouter>
-        <Container>
-          <ListaContatos />
-          <Routes>
-            <Route path="/" element={<DadosContato />} />
-            <Route path="/novo" element={<NovoContato />} />
-          </Routes>
-        </Container>
+        <Routes>
+          <Route path="/" element={<Container />}>
+            <Route path="novo" element={<NovoContato />} />
+            <Route path="editar/:id" element={<NovoContato />} />
+            <Route path="contato/:id" element={<DadosContato />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
-    </>
+    </Provider>
   )
 }
-
 export default App

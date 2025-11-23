@@ -29,6 +29,11 @@ export const InputNewContact = styled.input`
   }
 `
 
+export const LabelNewContact = styled.label`
+  font-weight: 600;
+  font-size: 14px;
+`
+
 export const ActionsButtonsForm = styled.div`
   display: flex;
   gap: 8px;

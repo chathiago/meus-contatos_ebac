@@ -5,6 +5,7 @@ export const DadosContainer = styled.div`
   display: block;
   text-align: center;
   margin: 0 auto;
+  max-height: 520px;
   padding: 30px;
   background-color: ${colors.tertiary};
   border: 1px solid ${colors.secondary};

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { PrimaryButton } from '../Buttons'
-import { ContainerWrapper } from '../Container'
+import { ContainerWrapper } from '../Container/styles'
 import ListaAlfabetica from '../ListaAlfabetica/ListaAlfabetica'
 import { Title } from '../Texts'
 
